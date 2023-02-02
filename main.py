@@ -6,11 +6,6 @@ def is_valid(digit, large):
     return False if not digit.isdigit() or not large >= int(digit) >= 1 else True
 
 
-# функция проверки корректности введенного наибольшего числа
-def is_largest_valid(digit):
-    return False if not digit.isdigit() else True
-
-
 # функция игры
 def game():
     my_num = input(f'Введите число от 1 до {largest_num}: ')
@@ -43,7 +38,7 @@ if __name__ == '__main__':
         largest_num = input('В каком промежутке играем от 1 до ')
 
         # проверка введенной строки
-        if not is_largest_valid(largest_num):
+        if not largest_num.isdigit():
             print('\nА может быть все-таки введем целое число?')
             continue
 
